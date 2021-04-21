@@ -18,6 +18,7 @@ class Book(models.Model):
     isbn=models.CharField('ISBN', max_length=13, unique=True, help_text='13 character <a href="https://www.isbn-international.org/content/what-isbn">ISBN number</a>')
     genre=models.ManyToManyField(Genre, help_text='Select a genre for this book')
     publisher=models.ForeignKey('Publisher', on_delete=models.SET_NULL, null=True)
+
     def __str__(self):
         return self.title
     def get_absolute_url(self):
@@ -51,6 +52,7 @@ class BookInstance(models.Model):
     )
     class Meta:
         ordering=['due_back']
+        permissions = (("can_mark_returned", "Set book as returned"),)
     def __str__(self):
         return f'{self.id}({self.book.title})'
 

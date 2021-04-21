@@ -8,4 +8,9 @@ urlpatterns=[
     path('authors/',views.AuthorListView.as_view(),name='authors'),
     path('authors/<int:pk>/', views.AuthorDetailView.as_view(), name='author-detail'),
     path('publishers/',views.PublisherListView.as_view(),name='publishers'),    
+    path('mybooks/',views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+    path('borrowed/', views.LoanedBooksAllListView.as_view(), name='all-borrowed'),
+    path("register/", views.register_request, name="register"),
+    path("register/success/", views.register_request_successful, name="register-success"),
+
 ]
