@@ -1,7 +1,12 @@
 from django.contrib import admin
-from .models import Author,Book,BookInstance,Genre,Language,Publisher
+from .models import Author,Book,BookInstance,Genre,Language,Publisher,Borrow_Request
 # Register your models here.
 #admin.site.register(Book)
+
+class RequestBookAdmin(admin.ModelAdmin):
+    list_display=('from_user','book_id')
+    
+admin.site.register(Borrow_Request,RequestBookAdmin)
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):

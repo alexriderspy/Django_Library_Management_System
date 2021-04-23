@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h2>Requests</h2>
+    <ul>
+        {% for request in object_list %}
+
+            <li>{{request.from_user}} {{request.book_id}} <a href="{% url 'process-borrow' %}">Accept</a> <a href="">Decline</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Pending Requests</h1>
+{% if borrowrequest_list %}
+<ul>
+    {% for request in borrowrequest_list %}
+    <li>
+        <a href="{% url 'request-detail' request.pk %}">{{request.bookinst.book.title}}</a> by {{request.borrower.username}}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>There are no books borrowed.</p>
+{% endif %}
+
+{% endblock %}

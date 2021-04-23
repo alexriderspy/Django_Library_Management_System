@@ -14,6 +14,14 @@
     <hr>
     <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
         {{copy.get_status_display}}
+        
+       {% if user.is_authenticated and not user.is_staff %}
+       
+       
+       {% if copy.status == 'a' %}<a href="{% url 'send-request' %}">Borrow</a>
+            {% endif %}
+        
+    {% endif %}
     </p>
     {% if copy.status != 'a' %}
     <p><strong>Due to be returned: </strong>{{copy.due_back}}</p>

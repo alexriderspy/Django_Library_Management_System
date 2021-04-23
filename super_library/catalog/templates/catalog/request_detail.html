@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<strong>User:</strong>  {request.borrower.username}
+<strong>BookInstance : </strong> {request.bookinst.book.title}
+<a href="">Approve</a>  <a href=""> Decline</a>
+
+{% endblock %}
