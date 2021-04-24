@@ -17,7 +17,7 @@ from django.urls import reverse
 from catalog.forms import GrantRequestForm
 
 @login_required
-def send_borrow_request(request, userID, bookID):
+def send_borrow_request(request, pk,userID, bookID):
     from_user=request.user
     to_user =User.objects.get(id=userID)
     book_id=BookInstance.objects.get(id=bookID)

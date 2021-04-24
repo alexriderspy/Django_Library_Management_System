@@ -1,0 +1,6 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+{% url 'send-request' pk = book_id.book.pk userID = from_user.username bookID=book_id.id %}
+
+{% endblock %}

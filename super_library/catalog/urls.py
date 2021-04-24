@@ -13,7 +13,7 @@ urlpatterns=[
     path("register/", views.register_request, name="register"),
     path("register/success/", views.register_request_successful, name="register-success"),
     path('acceptrequests/<int:userID>&&<int:bookID>', views.process_borrow,name="process-borrow"),
-    path('books/<int:pk>/sendrequest/<int:userID>&&<int:bookID>/',views.send_borrow_request, name='send-request'),
+    path('books/<int:pk>/sendrequest/<int:userID>/<int:bookID>/',views.send_borrow_request, name='send-request'),
     path('viewrequests/',views.ViewRequest.as_view(), name='all-requests'),
 
 ]
