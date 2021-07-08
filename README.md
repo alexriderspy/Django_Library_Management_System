@@ -15,6 +15,4 @@ Reverse for 'send-request' with arguments '('book_id.id', 'from_user.username', 
 So to be specific, inspite of setting up all appropriate urls, views and all, I was not able to get everything work perfectly. 
 I am therefore commenting out the portion of the HTML that is causing this error then the other features won't work. Not knowing what to do, I have left it as it is.
 <br><br>
-Also I love designing so in the mean time, as I was developing this backend system, I also looked up a number of websites (which you can find enlisted in my part2 repo) and designed few beautiful pages. My journey with Figma is in readme of part2. :)
-<br><br>
-And lastly, I would like to add that I love backend + design so choosing one over the other as a preference is really difficult. But come what may, I will definitely give in my best.
+ Am going to work on resolving my errors asap :)
